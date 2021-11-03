@@ -171,6 +171,10 @@ def paso3(w,x):
             estado=0
 
             return lista, False
+        if (y) < (cantidad - 2):
+            estado = 0
+
+            return lista, False
 
     return lista, x
 
