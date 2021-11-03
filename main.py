@@ -6,7 +6,7 @@ listaFinal=[]
 def iniciar():
     limpiar()
     wl=['#']
-    print(cadena.get())
+    #print(cadena.get())
     for i in list(cadena.get()):
         wl.append(i)
     wl.append('#')
@@ -14,7 +14,7 @@ def iniciar():
     valida=False
     listaFinal,valida = transiciones2.paso1(wl, 0)
     if valida:
-        etiqueta3 = tk.Label(text="CADENA VALIDA")
+        etiqueta3 = tk.Label(text="CADENA VALIDA!!!")
         etiqueta3.place(x=100, y=150)
     else :
         etiqueta3 = tk.Label(text="CADENA INVALIDA")
@@ -29,6 +29,7 @@ def limpiar():
     transiciones2.lista=[]
     transiciones2.posicion=0
     transiciones2.cantidad=0
+    transiciones2.estado=0
 #Creamos la ventana
 
 root = tk.Tk() #creamos la ventana

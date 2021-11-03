@@ -21,9 +21,9 @@ def agregar(indice):
     global lista
     global posicion
     d=asignandoList()
-    print(d)
+    #print(d)
     #print(w)
-    print("+1")
+    #print("+1")
     n=d[indice]
     d[indice]='['+n+']'
     aux=d.copy()
@@ -96,6 +96,7 @@ def paso2(w,x):
     global cantidad
     global estado
     n=0
+
     while n!=2:
         render(posicion)
         if blancoR(w, posicion):
@@ -104,22 +105,23 @@ def paso2(w,x):
         if n!=2:
             posicion=posicion + 1
     posicion=posicion-1
-    print("c")
+    #print("c")
     while n!=0:
         if validarC(w,posicion):
             agregar(posicion)
             n=n-1
             posicion=posicion-1
-            estado=1
+            estado=estado+1
         elif n==2:
             return lista,False
         else :
             return lista , False
-
-    lista, x = paso3(w,x)
-    if x==False and estado==1:
+    #print(estado)
+    if(estado==2):
+        lista, x = paso3(w,x)
+    if x==False and estado==2 and cantidad==1:
         return lista, True
-    if x==True and estado==2:
+    if x==True and estado==1:
         return lista, False
     return lista, x
 
@@ -127,8 +129,9 @@ def paso3(w,x):
     global posicion
     global cantidad
     global estado
-    n=0
+    n=1
     y=0
+    #print("----")
     d=asignandoList()
     while n!=2:
         render(posicion)
