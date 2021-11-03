@@ -1,5 +1,5 @@
 import tkinter as tk
-import transiciones
+import transiciones2
 import cinta
 #Funciones
 listaFinal=[]
@@ -11,7 +11,7 @@ def iniciar():
     wl.append('#')
     global listaFinal
     valida=False
-    listaFinal,valida = transiciones.paso1(wl, 0)
+    listaFinal,valida = transiciones2.paso1(wl, 0)
     if valida:
         etiqueta3 = tk.Label(text="CADENA VALIDA")
         etiqueta3.place(x=100, y=150)
