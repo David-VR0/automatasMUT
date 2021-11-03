@@ -4,6 +4,7 @@ import cinta
 #Funciones
 listaFinal=[]
 def iniciar():
+    limpiar()
     wl=['#']
     print(cadena.get())
     for i in list(cadena.get()):
@@ -24,7 +25,10 @@ def cinta1():
 
 #Funcion limpiar las variables cadena, transiciones.lista=[], transiciones.posicion=0
 
-
+def limpiar():
+    transiciones2.lista=[]
+    transiciones2.posicion=0
+    transiciones2.cantidad=0
 #Creamos la ventana
 
 root = tk.Tk() #creamos la ventana
@@ -47,8 +51,8 @@ entrada.place(x=100,y=70)
 boton1 = tk.Button(text="Iniciar",command=iniciar)
 boton1.place(x=200,y=100)
 
-boton2 = tk.Button(text="Limpiar")
-boton2.place(x=300,y=200)
+#boton2 = tk.Button(text="Limpiar")
+#boton2.place(x=300,y=200)
 
 boton3 = tk.Button(text="ver",command=cinta1)
 boton3.place(x=100,y=200)
