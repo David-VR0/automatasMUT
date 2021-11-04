@@ -14,7 +14,7 @@ def ventana2(lista, control):
     def refresh():
         try:
             label['text'] = next(objeto)
-            root.after(600, refresh)
+            root.after(200, refresh)
         except StopIteration:
             root.after(100000, root.destroy)
     if control == True:
