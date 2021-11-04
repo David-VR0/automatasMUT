@@ -76,8 +76,9 @@ def principal(w):
         return lista, False
     i=i+1
     lista, x, c,i = nmayor(w,i,c)
-    i = i + 1
+
     if(c==1):
+        i = i + 1
         while(c==1):
             lista, x, c ,i= nmayor(w, i, c)
             if c==1:
