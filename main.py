@@ -5,12 +5,18 @@ import cinta
 listaFinal=[]
 def iniciar():
     limpiar()
+    global listaFinal
     wl=['#']
     #print(cadena.get())
     for i in list(cadena.get()):
         wl.append(i)
+        if(i!='a' and i!='b' and i!='c'):
+            etiqueta3 = tk.Label(text="CADENA INVALIDA")
+            etiqueta3.place(x=100, y=150)
+            listaFinal=['Cadena Invalida']
+            return 0
     wl.append('#')
-    global listaFinal
+
     valida=False
     listaFinal,valida = transiciones.principal(wl)
     if valida:
