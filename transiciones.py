@@ -50,6 +50,7 @@ def guardarW(w):
 def render(i):
     global lista
     d=asignandoList()
+    print(d)
     m = d[i]
     d[i] = '[' + m + ']'
     aux = d.copy()
@@ -113,15 +114,17 @@ def nmayor(w,i,b):
             c=1 #sale del ciclo
 
     #MOV_L hasta encontrar una a
-    while (c != 0):
+    while (c != 0 and encuentra==True):
         i=i-1
         #+1 MOV_L
+        print(i)
         render(i)
+
         if (validarA(asignandoList(),i)):
             # Se encuentra una a
             marcar(asignandoList(),i)
             c=0 #sale del ciclo
-        if (blancoR(d,i)):
+        if (blancoR(asignandoList(),i)):
             #se encuentra un blanco quiere decir que no encontro a
             encuentra=False
     if(encuentra==False):
