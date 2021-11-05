@@ -30,6 +30,7 @@ def iniciar():
     else :
         etiqueta3 = tk.Label(text="---------CADENA INVALIDA :(----------", font=("Arial", 10), fg='#FF0000' )
         etiqueta3.place(x=80, y=200)
+        cinta1()
         
 def cinta1():
    
