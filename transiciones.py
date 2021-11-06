@@ -2,7 +2,7 @@ lista=[]
 
 
 def blancoR(wl, indice):
-    if(wl[indice]=='#'):
+    if(wl[indice]=='\u0180'):
         return True
 def validarA(wl,indice):
     if(wl[indice]=='a'):
@@ -41,7 +41,7 @@ def indicador(w,i):
     aux = w.copy()
     lista.append(aux)
     w[i] = d
-    w[i] = '#'
+    w[i] = '\u0180'
     aux = w.copy()
     lista.append(aux)
     w[i] = d

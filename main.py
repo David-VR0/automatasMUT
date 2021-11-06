@@ -9,18 +9,18 @@ listaFinal=[]
 def iniciar():
     limpiar()
     global listaFinal
-    wl=['#']
+    wl=['\u0180']
     #print(cadena.get())
     for i in list(cadena.get()):
         wl.append(i)
         if(i!='a' and i!='b' and i!='c'):
-            etiqueta3 = tk.Label(text="---------CADENA INVALIDA :(----------", font=("Arial", 10), fg='#FF0000')
+            etiqueta3 = tk.Label(text="-------------CADENA INVALIDA :(--------------", font=("Arial", 10), fg='#FF0000')
             etiqueta3.place(x=80, y=200)
             listaFinal=['Cadena Invalida, '
                         'introducir solo las letras : a b c']
             return 0
         
-    wl.append('#')
+    wl.append('\u0180')
     valida=False
     listaFinal,valida = transiciones.principal(wl)
     if valida:
@@ -28,7 +28,7 @@ def iniciar():
         etiqueta3.place(x=80, y=200)
         cinta1()
     else :
-        etiqueta3 = tk.Label(text="---------CADENA INVALIDA :(----------", font=("Arial", 10), fg='#FF0000' )
+        etiqueta3 = tk.Label(text="-------------CADENA INVALIDA :(--------------", font=("Arial", 10), fg='#FF0000' )
         etiqueta3.place(x=80, y=200)
         cinta1()
         
